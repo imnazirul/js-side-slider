@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpaceX</title>
+    <script src="https://kit.fontawesome.com/9b87c9a7f7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+        .timediv{
+            margin:0 auto;
+        }
+        .timebtn{
+            display:block;
+            height:70px;
+            font-size:30px;
+            padding:10px;
+            margin:20px;
+            background:green;
+            font-family: "Times New Roman", Times, serif;
+            text-align:center;
+            color:white;
+            
+        }
+#demo{
+  padding: 20px ;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+}
+
+
+.showabout{
+    width:100%;
+    border:1px solid aliceblue;
+
+}
+
+.showabout h1{
+    margin:20px 20px;
+    padding: 10px;
+    font-size: 40px;
+    color: #000;
+    color: #ddd;
+    text-shadow: 1px 1px 2px black;
+}
+
+.showabout h3{
+    background-color: cadetblue;
+    margin: 20px 30px;
+    padding: 5px;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+.showabout p{
+    font-size: 18px;
+    text-align: justify;
+    margin:20px 30px;
+    color:#fff
+}
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="menu-bar"><i class="fa-solid fa-bars"></i>
+
+            <div class="side-bar">
+
+                <ul>
+                    <li><a href="index.html"><i <i class="fa-solid fa-house-user"></i>Home</a></li>
+                    <li><a href="menu files/about.html"><i class="fa-regular fa-address-card"></i>About</a></li>
+                    <li><a href="menu files/contact.html"> <i class="fa-regular fa-address-book"></i>Contact</a></li>
+                    <li><a href="menu files/service.html"><i class="fa-brands fa-servicestack"></i>Services</a></li>
+                    <li><a href="menu files/terms.html"><i class="fa-regular fa-circle-question"></i>Terms&Conditions</a></li>
+                    <li><a href="menu files/privacy.html"><i class="fa-solid fa-lock"></i>Privacy Policy</a></li>
+                    <li><a href="menu files/setting.html"><i class="fa-solid fa-gear"></i>Setting Privacy</a></li>
+    
+                 </ul>
+    
+            </div>
+</div>
+  
+            
+        <div class="header-txt"><a href="index.html"><strong>SpaceX</strong></a></div>
+        <div class="user-icon"><a href="#"><i class="fa-solid fa-circle-user"></i> </a> </div>
+
+    </div>
+
+<p id="demo"></p>
+    
+    <div class="gif-container">
+
+        <h1>Under Construction</h1>
+
+        <div class="under-pic"></div>
+
+    </div>
+
+    
+    <!------proggress bar-->
+ 
+
+    <div class="prog-container">
+        <h1>HTML</h1>
+        <div class="html">
+            <div class="html-ani"></div>
+        </div>
+
+        <h1>CSS</h1>
+        <div class="css">
+            <div class="css-ani"></div>
+        </div>
+
+        <h1>JS</h1>
+        <div class="js">
+            <div class="js-ani"></div>
+        </div>
+    </div>
+    </div> 
+
+<script>
+
+
+const Month = new Date().getMonth();
+let text1 = "" ;
+
+switch(Month) {
+  case 0:
+    text1 = "January";
+    break;
+  case 1:
+    text1 = "February";
+    break;
+  case 2:
+    text1 = "March";
+    break;
+  case 3:
+    text1 = "April";
+    break;
+  case 4:
+    text1 = "May";
+    break;
+  case 5:
+    text1 = "June";
+    break;
+  case 6:
+    text1 = "July";
+    break;
+  case 7:
+    text1 = "Auguest";
+    break;
+  case 8:
+    text1 = "September";
+    break;
+  case 9:
+    text1 = "October";
+    break;
+  case 10:
+    text1 = "November";
+    break;
+  case 11:
+    text1 = "December";
+    
+}
+
+const day = new Date().getDay();
+let text = "" ;
+
+switch(day) {
+  case 0:
+    text = "Sunday";
+    break;
+  case 1:
+    text = "Monday";
+    break;
+  case 2:
+    text = "Tuesday";
+    break;
+  case 3:
+    text = "Wednesday";
+    break;
+  case 4:
+    text = "Thrusday";
+    break;
+  case 5:
+    text = "Friday";
+    break;
+  case 6:
+    text = "Saturday";
+    
+}
+
+
+function getTimeIn12HourFormat() {
+  const now = new Date();
+  
+
+  const localTime = new Date().toLocaleTimeString();
+
+  const time12HourFormat = `<h1>${localTime}</h1> <h3>${text} ${now.getDate()} ${text1}  ${now.getFullYear()} </h3>`;
+    
+  document.getElementById('demo').innerHTML = time12HourFormat ;
+}
+
+setInterval(getTimeIn12HourFormat, 0)
+
+
+
+</script>
+
+
+    
+</body>
+</html>
